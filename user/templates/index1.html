@@ -1,0 +1,726 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>coding courses and wealth training</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+  .data .skills a{
+      text-decoration:none;
+      color:#fff;
+  }
+    .header{
+    background-color:#e2eafe;
+    margin-top:-40px;
+    height:116px;
+    width:100%;}
+    .txt{
+    color:#43782a;
+    font-size:40px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    float:left;
+    margin-left:23px;
+    margin-top:27px;}
+    .menu{
+    margin-top:43px;
+    margin-left:403px;}
+    .top{
+    margin-top:43px;
+    font-size:20px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    float:left;
+    }
+    .untop{
+    margin-top:43px;
+    font-size:20px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    margin-left:80px;
+    float:left;
+    }
+    .img{
+     margin-top:21px;
+    width:61px;
+    height:55px;
+     margin-left:100px;}
+     .btn a{
+         text-decoration:none;
+         color:#000;
+     }
+     .btn{
+      font-size:20px;
+    font-weight:bold;
+     background-color:#dcdbfe;
+     margin-left:750px;
+     margin-top:-51px;
+     height:45px;
+     width:132px;
+     border-radius:10px;
+     font-family: "Miriam Libre", sans-serif;
+     border:0px;
+     float:left;}
+    .name{
+     width:100%;
+     height:769px;
+     background-color:#323A5F;
+     top:97px;
+     }
+      .plane{
+      width:838px;
+      height:707px;
+      float:left;
+      margin-right:44px;
+      margin-top:40px;
+      }
+      .incubator{
+      margin-left:-809px;
+      margin-top:100px;
+      float:left;
+      }
+      .proj{
+      font-size:40px;
+      font-weight:bold;
+      color:#000;
+      font-family: "Miriam Libre", sans-serif;
+
+      }
+      .proj2{
+      font-size:20px;
+      font-weight:bold;
+      color:#000;
+      font-family: "Miriam Libre", sans-serif;
+      }
+      .inc2{
+      float:left;
+      margin-top:-609px;
+      margin-left:950px;
+      font-size:20px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#000;
+      font-weight:bold;}
+      .codes{
+      float:left;
+      margin-top:-509px;
+      margin-left:850px;
+      font-size:20px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#000;
+      font-weight:bold;}
+      .codes input{
+      margin-left:20px;
+      height:37px;
+      width: 287px;
+      }
+      .codes button{
+      margin-left:120px;
+      height:37px;
+      width: 287px;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      background-color:#417AE9;
+      border:0px;
+      }
+      .codes input{
+      margin-bottom:20px;
+      }
+       .codes input["email"]{
+      margin-left:50px;
+      }
+      .train{
+      background-color:#FFFBD8;
+      width:100%;
+      height:564px;
+      }
+      .techtrain{
+      float:left;
+      margin-left:50px;
+      margin-top:100px;
+
+      }
+      .imgtrain{
+       height:192px;
+       width:354px;
+      }
+      .texttrain{
+      margin-left:50px;
+      text-align:center;
+      font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+
+      }
+      .btnsee a{
+          text-decoration:none;
+      color:#000;
+      }
+      .btnsee{
+      float:left;
+      margin-top:100px;
+      margin-left:600px;
+      height:39px;
+      width:158px;
+      background-color:#41e848;
+      color:#000;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+
+
+      }
+      .data{
+      width:100%;
+      height:438px;
+      background-color:#323a5f;
+      }
+      .skills{
+       height:68px;
+       width:336px;
+       float:left;
+       background-color:#323a5f;
+       border:2px #fff solid;
+       margin-left:72px;
+       margin-top:32px;
+       color:#fff;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+      }
+      .virtual{
+      width:100%;
+      height:468px;
+      background-color:#06c59c;
+      }
+      .virtualtext{
+       font-family: "Miriam Libre", sans-serif;
+      font-size:30px;
+      color:#ff0303;
+      font-weight:bold;
+      float:left;
+      margin-left:98px;
+      margin-top:62px;
+
+
+      }
+      .virtualimg{
+      height:418px;
+      width:480px;
+      float:left;
+      margin-left:800px;
+      margin-top:-250px;
+
+
+
+      }
+      .robot{
+      width:100%;
+      height:442px;
+      background-image:url("{% static 'images/ai-generated-8331364_1280.jpg' %}");
+      background-repeat:no-repeat,repeat;
+      background-position:center;
+      background-size:cover;
+      }
+      .robotimg{
+       float:left;
+       margin-left:958px;
+       margin-top:360px;
+       width:284px;
+       height:64px;
+      }
+      .lastfooter{
+      width:100%;
+      height:324px;
+      background-color:#d9d9d9;
+      }
+      .lasttext a{
+          text-decoration:none;
+          color:#000;
+      }
+      .lasttext{
+       height:68px;
+       width:336px;
+       float:left;
+
+       margin-left:72px;
+       margin-top:12px;
+       color:#000;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+
+      }
+          @media (max-width: 1208px) {
+              body{
+                  width:100%;
+              }
+
+        .header{
+    background-color:#e2eafe;
+    margin-top:-10px;
+    margin-left:-10px;
+    height:130px;
+    width:100%;
+}
+    .menu{
+    margin-top:43px;
+    margin-left:22px;}
+    .img{
+     display:none;}
+     .btn{
+      font-size:40px;
+    font-weight:bold;
+     background-color:#dcdbfe;
+     margin-left:700px;
+     margin-top:-10px;
+     height:65px;
+     width:232px;
+     border-radius:10px;
+     font-family: "Miriam Libre", sans-serif;
+     border:0px;
+     float:left;}
+    .top {
+    display:none;
+    }
+    .untop{
+   display:none;
+    }
+    .txt{
+    color:#43782a;
+    font-size:65px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    float:left;
+    margin-left:21px;
+    margin-top:19px;
+    height:27px;}
+    .name{
+     width:100%;
+     min-height:1569px;
+     background-color:#323A5F;
+     top:97px;
+     }
+
+      .plane{
+      width:938px;
+      height:1307px;
+      float:left;
+      visibility: hidden;
+      margin-left:0px;
+      margin-top:60px;
+      }
+      .incubator{
+      margin-left:-729px;
+      margin-top:250px;
+      float:left;
+      }
+       .proj{
+      font-size:60px;
+      font-weight:bold;
+      color:#FFA500;
+      font-family: "Miriam Libre", sans-serif;
+
+      }
+      .proj2{
+      font-size:30px;
+      font-weight:bold;
+      color:#FFA500;
+      font-family: "Miriam Libre", sans-serif;
+      }
+       .inc2{
+      float:left;
+      margin-top:-644px;
+      height:86px;
+      margin-left:309px;
+      font-size:50px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#FFA500;
+      font-weight:bold;}
+      .codes{
+      float:left;
+      margin-top:-219px;
+      margin-left:100px;
+      font-size:50px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#000;
+      font-weight:bold;}
+      .codes input{
+      margin-left:20px;
+      height:37px;
+      width: 387px;
+      }
+      .codes button{
+      margin-left:230px;
+      height:67px;
+      width: 387px;
+      margin-top:49px;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:35px;
+      border-radius:10px;
+      border:0px;
+      background-color:#417AE9;
+      border:0px;
+      }
+      .codes input{
+      margin-bottom:20px;
+      }
+       .codes input["email"]{
+      margin-left:70px;
+      }
+
+       .train{
+      background-color:#FFFBD8;
+      width:100%;
+      height:2064px;
+      padding-top:50px;
+       padding-bottom:50px;
+      }
+      .techtrain{
+      float:none;
+      margin-left:50px;
+      margin-top:100px;
+
+      }
+      .imgtrain{
+       height:455px;
+       width:620px;
+       margin-left:100px;
+       border-radius:10px;
+      }
+      .texttrain{
+      margin-left:-50px;
+      margin-top:20px;
+      text-align:center;
+      font-family: "Miriam Libre", sans-serif;
+      font-size:36px;
+      font-weight:bold;
+
+      }
+      .btnsee a{
+          text-decoration:none;
+      color:#fff;
+      }
+      .btnsee{
+
+      margin-top:100px;
+      margin-left:290px;
+      height:100px;
+      width:354px;
+      background-color:#41e848;
+      color:#000;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:35px;
+      font-weight:bold;
+      border-radius:10px;
+      border:0px;
+
+
+      }
+       .data{
+      width:100%;
+      height:1738px;
+      background-color:#323a5f;
+      }
+      .skills{
+       height:108px;
+       width:636px;
+       float:none;
+       background-color:#323a5f;
+       border:2px #fff solid;
+       margin-left:150px;
+       margin-top:72px;
+       color:#fff;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:35px;
+      font-weight:bold;
+      }
+
+           .virtual{
+      width:100%;
+      height:1018px;
+      padding-top:50px;
+      background-color:#06c59c;
+      }
+      .virtualtext{
+       font-family: "Miriam Libre", sans-serif;
+      font-size:30px;
+      color:#ff0303;
+      font-weight:bold;
+      float:none;
+      margin-left:198px;
+      margin-top:62px;
+
+
+      }
+      .virtualimg{
+      height:618px;
+      width:100%;
+      float:none;
+      margin-left:198px;
+      margin-top:0px;
+      }
+       .robot{
+      width:100%;
+      height:842px;
+      background-image:url("{% static 'images/ai-generated-8331364_1280.jpg' %}");
+      background-repeat:no-repeat,repeat;
+      background-position:center;
+      background-size:cover;
+      }
+      .robotimg{
+       float:left;
+       margin-left:558px;
+       margin-top:660px;
+       width:284px;
+       height:124px;
+      }
+       .lastfooter{
+      width:100%;
+
+      height:734px;
+      background-color:#d9d9d9;
+      }
+      .lasttext{
+       height:68px;
+       width:636px;
+       float:left;
+
+       margin-left:72px;
+       margin-top:2px;
+       color:#000;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:25px;
+      font-weight:bold;
+
+      }
+
+       }
+
+
+
+
+
+
+  </style>
+</head>
+<body>
+<section >
+
+
+
+   <div class="header">
+       <div class="txt">
+           trustalliance
+       </div>
+       <div class="menu">
+           <a herf="/workers/26" class="top" >pricing</a>
+           <a class="untop" herf="workers/">courses</a>
+           <a class="untop" herf="workers/">online courses</a>
+           <a class="untop" herf="jobs">career</a>
+           <img class="img" src="{% static 'images/magnifying-glass-1976105_1280.png' %}">
+           <button class="btn"><a href="login">login</a></button>
+       </div>
+
+   </div>
+
+
+<section class="name">
+
+    <img class="plane" src="{% static 'images/plane-3093859_1280.jpg' %}">
+
+  <div class="incubator">
+        <div class="proj">
+            the<br> project incubator and <br> learning platform
+
+        </div>
+      <div class="proj2">
+            Live virtual courses are available<br>
+            learn from professional tutors<br>
+          coding courses <br>
+          graphics design masterclass<br>
+          e-learning platform
+
+        </div>
+
+    </div>
+    <div class="inc2">
+        Join the millions of creators around<br>
+        the world building and earning from<br>
+        their skills
+
+    </div>
+    <div class="codes">
+        <label>Email <span style="color:#323A5F;">__.</span>  <input class="email" type="email"></label>
+        <br>
+        <label>Password  <input type="password"></label>
+         <label><button  value="enter"><a href="login" style="text-decoration:none; color:#000;">sign up</a></button></label>
+
+    </div>
+
+
+
+</section>
+
+<section class="train">
+    <div class="techtrain">
+        <video class="imgtrain"  controls autoplay loop muted poster="thumbnail.jpg">
+        <source src="{% static 'images/tutorial.html – pygame.py 2024-07-07 02-52-48.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+         </video>
+         <div class="texttrain">
+             python programming course
+
+
+         </div>
+    </div>
+
+    <div class="techtrain">
+        <video class="imgtrain"  controls autoplay loop muted poster="thumbnail.jpg">
+        <source src="{% static 'images/tutorial.html – tasky.html 2024-07-07 02-56-38.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+         </video>
+         <div class="texttrain">
+               ui/ux development  course
+
+
+         </div>
+    </div>
+
+    <div class="techtrain">
+
+          <video class="imgtrain"  controls autoplay loop muted poster="thumbnail.jpg">
+        <source src="{% static 'images/betterby - Figma 2024-07-07 02-58-45.mp4' %}" type="video/mp4">
+        Your browser does not support the video tag.
+         </video>
+         <div class="texttrain">
+             graphics design course
+
+
+         </div>
+    </div>
+    <div class="">
+        <button class="btnsee"><a href="workers/">see more</a></button>
+
+    </div>
+
+</section>
+
+<section class="data">
+    <div>
+        <button class="skills"><a href="workers/">web development</a></button>
+    </div>
+
+     <div>
+        <button class="skills"><a href="workers/">design skills</a></button>
+    </div>
+     <div>
+        <button class="skills"><a href="workers/">trade skills</a></button>
+    </div>
+     <div>
+        <button class="skills"><a href="workers/">blockchain technologies</a></button>
+    </div>
+     <div>
+        <button class="skills"><a href="workers/">python coding training</a></button>
+    </div>
+     <div>
+        <button class="skills"><a href="workers/">writing skills</a></button>
+    </div>
+     <div>
+        <button class="skills"><a href="workers/">educational courses</a></button>
+    </div>
+
+     <div>
+        <button class="skills"><a href="workers/">video editing</a></button>
+    </div>
+
+
+
+</section>
+
+<section class="virtual">
+    <div class="virtualtext">
+        Live virtual courses<br>
+        available for hundreds<br>
+        of courses<br>
+        <br>
+        Learn from a live tutor <br>
+         hundreds of tech and educational courses are available
+
+    </div>
+
+    <div>
+        <img class="virtualimg" src="{% static 'images/laptop-5568038_1280.png' %}">
+    </div>
+
+
+</section>
+
+<section class="robot">
+      <a href="login/"><img class="robotimg" src="{% static 'images/sign-up-7178844_1280.png' %}"></a>
+
+
+</section>
+
+<section class="lastfooter">
+     <div class="lasttext">
+        <a href="workers/24">pricing quote</a>
+
+    </div>
+    <div class="lasttext">
+        <a href="jobs/">career</a>
+
+    </div>
+    <div class="lasttext">
+        <a href="workers/24">contact us</a>
+
+    </div>
+
+     <div class="lasttext">
+        <a href="workers/24">about us</a>
+
+    </div>
+
+     <div class="lasttext">
+        <a href="workers/">online courses</a>
+
+    </div>
+     <div class="lasttext">
+        <a href="workers/24">help center</a>
+
+    </div>
+     <div class="lasttext">
+        <a href="mailto:daropaleb@gmail.com">email</a>
+
+    </div>
+     <div class="lasttext">
+        <a href="workers/24">pricing information</a>
+
+    </div>
+     <div class="lasttext">
+        <a href="tel:+2347011664980">contact</a>
+
+    </div>
+     <div class="lasttext">
+
+
+    </div>
+     <div class="lasttext">
+       @2024 trustalliance all rights reserved
+
+
+    </div>
+
+
+
+</section>
+
+</section>
+
+</body>
+
+</html>

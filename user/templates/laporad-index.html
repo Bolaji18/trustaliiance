@@ -1,0 +1,693 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="Freelance Nigeria" />
+  <meta name="description" content="Nigeria's Freelance Service Website, Find work, Hire Professional Service for One time jobs,  Hire workers with extra safet" />
+  <meta name="author" content="BJ" />
+  <link rel="shortcut icon" href="{% static 'slider-img.png' %}" type="png">
+
+  <title> Find Work, Learn Coding and post your job so that you can discover new clients on our freelance website built for nigerians </title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Miriam+Libre:wght@400;700&display=swap" rel="stylesheet">
+
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="{% static 'css/font-awesome.min.css' %}" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="{% static 'css/style.css' %}" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="{% static 'css/responsive.css' %}" rel="stylesheet" />
+  <style>
+      body{
+          font-family: "Miriam Libre", sans-serif;
+      }
+      .pop-up-element {
+    opacity: 0;
+    transform: translateY(50px); /* or translateX for horizontal movement */
+    transition: opacity 0.5s ease, transform 0.5s ease;
+     }
+     .pop-up-element.active {
+    opacity: 1;
+    transform: translateY(0);
+   }
+
+
+  </style>
+
+</head>
+
+<body style="background-color:#fff; font-family: 'Miriam Libre', sans-serif;">
+
+  <div class="hero_area">
+
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+
+      </div>
+    </div>
+
+    <!-- header section strats -->
+    <header class="header_section" style="background-color:#CFBFFF;  ">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="{% url 'home' %}">
+            <span style=" font-size:24; color:#000">
+              Trustalliance NG
+            </span>
+          </a>
+
+            <span class="">{% if request.user.username %}
+            <a class="nav-link" href="{% url 'userpage' %}"> <button class="butto" style=" background-color: #CFBFFF;  color:#000; border: 1px #000 solid; border-radius: 2px; height:30px; width:40px;">{{ request.user.username.0 }}</button></a> </span>
+            {% else %}
+             <a class="nav-link" href="{% url 'log' %}"><button class="butto"style=" background-color: #CFBFFF; color:#000; 	border: 1px #000 solid; border-radius: 2px;">Login</button></a>
+              {% endif %}
+
+          <div class="collapse nav
+          bar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav">
+                {% if request.user.username %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'userpage' %}"> Welcome {{ request.user.username }}</a>
+              </li>
+
+              {% else %}
+              <li class="nav-item active">
+                <a class="nav-link" href="{% url 'log' %}">Login</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'newacc' %}">Create new user</a>
+              </li>
+              {% endif %}
+
+            </ul>
+          </div>
+        </nav>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+
+
+
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding" style="background-color: #E8E8E8; color:#000; ">
+    <div class="service_container" style="margin-top:-50px;">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+
+
+          </h2>
+                        <span><a href="{% url 'coding' %}" class="btn1" style="color:rgb(0%, 0%, 45.5%)" ><h3>Learn Coding</h3></a></span>
+                        <span><a href="{% url 'jobs' %}" class="btn1" style="color:rgb(0%, 0%, 45.5%)" ><h3>Find Work</h3></a></span>
+                        <span><a href="{% url 'work' %}" class="btn1" style="color:rgb(0%, 0%, 45.5%)"><h3> Post Your Work</h3></a></span>
+                        <span><a href="{% url 'service' %}" class="btn1" style="color:rgb(0%, 0%, 45.5%)"><h3> Post A Job</h3></a></span>
+
+          <p>
+          </p>
+        </div>
+        <div class="row">
+            {% for x in job reversed%}
+             {% if x.verified == True %}
+              <div class="col-md-4 pop-up-element " style="min-height:250px; " >
+            <div class="box " style="border:1px #333 solid; border-radius:10px; min-height:250px; max-height:700px; box-shadow: 0 4px 8px 0 #000, 0 6px 20px 0 #f0f0f0;">
+              <div class="img-box">
+
+              </div>
+              <div class="detail-box">
+                   <a href="workers/{{x.id}}">
+                  <p>
+                          {{x.firstname}} {{x.lastname}}
+                  </p>
+                 <h5>
+                  <p>{{x.speciality}}</p>
+                  </h5>
+
+
+             <p>  Contact</a></p>
+
+
+              </div>
+            </div>
+          </div>
+
+
+     {% endif %}
+      {% endfor %}
+       {% for x in job %}
+       {% if x.verified == False %}
+          <div class="col-md-4 pop-up-element "  style="min-height:250px; " >
+            <div class="box " style="border:1px #333 solid; border-radius:10px; min-height:250px; max-height:700px; box-shadow: 0 4px 8px 0 #000, 0 6px 20px 0 #f0f0f0;">
+              <div class="img-box">
+
+              </div>
+              <div class="detail-box" >
+                   <a href="workers/{{x.id}}">
+                   <p>
+                           {{x.firstname}} {{x.lastname}}
+                  </p>
+            <h5>
+                  <p> {{x.speciality}}</p>
+
+                </h5>
+
+                <p> contact</a></p>
+              </div>
+            </div>
+          </div>
+           {% endif %}
+          {% endfor %}
+
+
+
+
+          </div>
+
+
+
+
+        <div class="btn-box pop-up-element" >
+          <a href="{% url 'worker' %}" style="box-shadow: 0 4px 8px 0 #000, 0 6px 20px 0 #f0f0f0;">
+            See More
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end service section -->
+
+
+  <!-- about section -->
+
+
+  <!-- end about section -->
+
+  <!-- why section -->
+
+  <section class="why_section layout_padding" style="background-color:#fff;">
+    <div class="container ">
+      <div class="heading_container heading_center pop-up-element">
+        <h2>
+          Why Choose <span>Us</span>
+        </h2>
+      </div>
+      <div class="why_container">
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/w1.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Expert Management
+            </h5>
+            <p>
+                 We are committed to our clients excellence and your will be our singular focus .
+                 Our S.A.S.S Software as a Sevice feature allows us to design and create software to meet our clients businesses and needs.
+                details
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/w2.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Learn Python an Web Development
+            </h5>
+            <p>
+                Learn Web Development Take our web development course and become a full stack web developer, you will be taught Html, Css and Javascript.
+                Course is organised virtually with Google Meet.I can design and create web programs. i can also teach students python and django programming
+            </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/w3.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Professional advise
+            </h5>
+             <p>
+                 Hire professional service and unleash the potential of your company.
+                 We provide free advise with regards to your business requirements
+             </p>
+          </div>
+        </div>
+        <div class="box">
+          <div class="img-box">
+            <img src="{% static 'images/w4.png' %}" alt="">
+          </div>
+          <div class="detail-box">
+            <h5>
+              Happy Customers
+            </h5>
+            <p>
+
+                  Our goal is to maximize your business potential be it marketing, trading etc reach out to us for more.
+                  We complete the requirements of our clients in a fast and efficient manner.
+            </p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="btn-box">
+        <a href="services/">
+          Hire today
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- end why section -->
+
+  <!-- team section -->
+  <section class="team_section layout_padding"  style="display:none;">
+    <div class="container-fluid">
+      <div class="heading_container heading_center">
+        <h2 class="">
+          Our <span> Team</span>
+        </h2>
+      </div>
+
+      <div class="team_container">
+        <div class="row">
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/team-1.jpg' %}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Joseph Brown
+                </h5>
+                <p>
+                  Marketing Head
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/team-2.jpg' %}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Nancy White
+                </h5>
+                <p>
+                  Marketing Head
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/team-3.jpg' %}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Earl Martinez
+                </h5>
+                <p>
+                  Marketing Head
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-3 col-sm-6">
+            <div class="box ">
+              <div class="img-box">
+                <img src="{% static 'images/team-4.jpg' %}" class="img1" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Josephine Allard
+                </h5>
+                <p>
+                  Marketing Head
+                </p>
+              </div>
+              <div class="social_box">
+                <a href="#">
+                  <i class="fa fa-facebook" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-twitter" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-linkedin" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-instagram" aria-hidden="true"></i>
+                </a>
+                <a href="#">
+                  <i class="fa fa-youtube-play" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- end team section -->
+
+
+  <!-- client section -->
+
+  <section class="client_section layout_padding"  style="display:none;">
+    <div class="container">
+      <div class="heading_container heading_center psudo_white_primary mb_45">
+        <h2>
+          What says our <span>Customers</span>
+        </h2>
+      </div>
+      <div class="carousel-wrap ">
+        <div class="owl-carousel client_owl-carousel">
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static 'images/client1.jpg' %}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      LusDen
+                    </h6>
+                    <p>
+                      magna aliqua. Ut
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                 Our diverse reach allows clients to hire one time or permananet service, from logistics, trade, ict, tech etc. We help our clients get the proffessional help they need no matter the required field</div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static 'images/client2.jpg' %}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Zen Court
+                    </h6>
+                    <p>
+                      magna aliqua. Ut
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static 'images/client1.jpg' %}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      LusDen
+                    </h6>
+                    <p>
+                      magna aliqua. Ut
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+              </div>
+            </div>
+          </div>
+          <div class="item">
+            <div class="box">
+              <div class="img-box">
+                <img src="{% static 'images/client2.jpg' %}" alt="" class="box-img">
+              </div>
+              <div class="detail-box">
+                <div class="client_id">
+                  <div class="client_info">
+                    <h6>
+                      Zen Court
+                    </h6>
+                    <p>
+                      magna aliqua. Ut
+                    </p>
+                  </div>
+                  <i class="fa fa-quote-left" aria-hidden="true"></i>
+                </div>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end client section -->
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Location
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call +2347011664980
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  help@trustallianceng.com
+                </span>
+              </a>
+            </div>
+          </div>
+          <div class="info_social">
+            <a href="">
+              <i class="fa fa-facebook" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-twitter" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin" aria-hidden="true"></i>
+            </a>
+            <a href="">
+              <i class="fa fa-instagram" aria-hidden="true"></i>
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+              Info
+            </h4>
+            <p>
+             Our diverse reach allows clients to hire one time or permananet service, from logistics, trade, ict, tech etc. We help our clients get the proffessional help they need no matter the required field</p>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+              Links
+            </h4>
+            <div class="info_links">
+              <a class="active" href="#">
+                Home
+              </a>
+              <a class="" href="#">
+                About
+              </a>
+              <a class="" href="#">
+                Services
+              </a>
+              <a class="" href="#">
+                Why Us
+              </a>
+              <a class="" href="#">
+                Team
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col ">
+          <h4>
+            Subscribe
+          </h4>
+          <form action="#">
+            <input type="text" placeholder="Enter email" />
+            <button type="submit">
+              Subscribe
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="#">TrustAllianceNG</a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script>
+      // Function to check if element is in viewport
+function isInViewport(element) {
+    const rect = element.getBoundingClientRect();
+    return (
+        rect.top >= 0 &&
+        rect.left >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+// Function to handle scroll event
+function handleScroll() {
+    const elements = document.querySelectorAll('.pop-up-element');
+    elements.forEach(element => {
+        if (isInViewport(element)) {
+            element.classList.add('active');
+        }
+    });
+}
+
+// Add event listener for scrolling
+window.addEventListener('scroll', handleScroll);
+
+  </script>
+  <script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="{% static 'js/custom.js' %}"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
+</body>
+
+</html>

@@ -1,0 +1,467 @@
+   .header{
+    background-color:#e2eafe;
+    margin-top:-40px;
+    height:116px;
+    width:100%;}
+    .txt{
+    color:#43782a;
+    font-size:40px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    float:left;
+    margin-left:23px;
+    margin-top:27px;}
+    .menu{
+    margin-top:43px;
+    margin-left:403px;}
+    .top{
+    margin-top:43px;
+    font-size:20px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    float:left;
+    }
+    .untop{
+    margin-top:43px;
+    font-size:20px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    margin-left:80px;
+    float:left;
+    }
+    .img{
+     margin-top:21px;
+    width:61px;
+    height:55px;
+     margin-left:100px;}
+     .btn{
+      font-size:20px;
+    font-weight:bold;
+     background-color:#dcdbfe;
+     margin-left:750px;
+     margin-top:-51px;
+     height:45px;
+     width:132px;
+     border-radius:10px;
+     font-family: "Miriam Libre", sans-serif;
+     border:0px;
+     float:left;}
+    .name{
+     width:100%;
+     height:769px;
+     background-color:#323A5F;
+     top:97px;
+     }
+      .plane{
+      width:838px;
+      height:707px;
+      float:left;
+      margin-right:44px;
+      margin-top:40px;
+      }
+      .incubator{
+      margin-left:-809px;
+      margin-top:100px;
+      float:left;
+      }
+      .proj{
+      font-size:40px;
+      font-weight:bold;
+      color:#ff8d8d;
+      font-family: "Miriam Libre", sans-serif;
+
+      }
+      .proj2{
+      font-size:20px;
+      font-weight:bold;
+      color:#ff8d8d;
+      font-family: "Miriam Libre", sans-serif;
+      }
+      .inc2{
+      float:left;
+      margin-top:-609px;
+      margin-left:950px;
+      font-size:20px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#fff;
+      font-weight:bold;}
+      .codes{
+      float:left;
+      margin-top:-509px;
+      margin-left:850px;
+      font-size:20px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#000;
+      font-weight:bold;}
+      .codes input{
+      margin-left:20px;
+      height:37px;
+      width: 287px;
+      }
+      .codes button{
+      margin-left:120px;
+      height:37px;
+      width: 287px;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      background-color:#417AE9;
+      border:0px;
+      }
+      .codes input{
+      margin-bottom:20px;
+      }
+       .codes input["email"]{
+      margin-left:50px;
+      }
+      .train{
+      background-color:#FFFBD8;
+      width:100%;
+      height:564px;
+      }
+      .techtrain{
+      float:left;
+      margin-left:50px;
+      margin-top:100px;
+
+      }
+      .imgtrain{
+       height:192px;
+       width:354px;
+      }
+      .texttrain{
+      margin-left:50px;
+      text-align:center;
+      font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+
+      }
+      .btnsee{
+      float:left;
+      margin-top:100px;
+      margin-left:600px;
+      height:39px;
+      width:158px;
+      background-color:#41e848;
+      color:#000;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+
+
+      }
+      .data{
+      width:100%;
+      height:438px;
+      background-color:#323a5f;
+      }
+      .skills{
+       height:68px;
+       width:336px;
+       float:left;
+       background-color:#323a5f;
+       border:2px #fff solid;
+       margin-left:72px;
+       margin-top:32px;
+       color:#fff;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+      }
+      .virtual{
+      width:100%;
+      height:468px;
+      background-color:#06c59c;
+      }
+      .virtualtext{
+       font-family: "Miriam Libre", sans-serif;
+      font-size:30px;
+      color:#ff0303;
+      font-weight:bold;
+      float:left;
+      margin-left:98px;
+      margin-top:62px;
+
+
+      }
+      .virtualimg{
+      height:418px;
+      width:480px;
+      float:left;
+      margin-left:800px;
+      margin-top:-250px;
+
+
+
+      }
+      .robot{
+      width:100%;
+      height:442px;
+      background-image:url("{% static 'images/ai-generated-8331364_1280.jpg' %}");
+      background-repeat:no-repeat,repeat;
+      background-position:center;
+      background-size:cover;
+      }
+      .robotimg{
+       float:left;
+       margin-left:958px;
+       margin-top:360px;
+       width:284px;
+       height:64px;
+      }
+      .lastfooter{
+      width:100%;
+      height:304px;
+      background-color:#d9d9d9;
+      }
+      .lasttext{
+       height:68px;
+       width:336px;
+       float:left;
+
+       margin-left:72px;
+       margin-top:12px;
+       color:#000;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:20px;
+      font-weight:bold;
+
+      }
+  @media (max-width: 1208px) {
+        .header{
+    background-color:#e2eafe;
+    margin-top:-10px;
+    margin-left:-10px;
+    height:130px;
+    width:100%;
+    position:fixed;}
+    .menu{
+    margin-top:43px;
+    margin-left:22px;}
+    .img{
+     display:none;}
+     .btn{
+      font-size:40px;
+    font-weight:bold;
+     background-color:#dcdbfe;
+     margin-left:700px;
+     margin-top:-10px;
+     height:65px;
+     width:232px;
+     border-radius:10px;
+     font-family: "Miriam Libre", sans-serif;
+     border:0px;
+     float:left;}
+    .top {
+    display:none;
+    }
+    .untop{
+   display:none;
+    }
+    .txt{
+    color:#43782a;
+    font-size:65px;
+    font-weight:bold;
+    font-family: "Miriam Libre", sans-serif;
+    float:left;
+    margin-left:21px;
+    margin-top:19px;
+    height:27px;}
+    .name{
+     width:100%;
+     height:1569px;
+     background-color:#323A5F;
+     top:97px;
+     }
+
+      .plane{
+      width:938px;
+      height:1307px;
+      float:left;
+      margin-left:0px;
+      margin-top:60px;
+      }
+      .incubator{
+      margin-left:-729px;
+      margin-top:250px;
+      float:left;
+      }
+       .proj{
+      font-size:60px;
+      font-weight:bold;
+      color:#ff8d8d;
+      font-family: "Miriam Libre", sans-serif;
+
+      }
+      .proj2{
+      font-size:40px;
+      font-weight:bold;
+      color:#ff8d8d;
+      font-family: "Miriam Libre", sans-serif;
+      }
+       .inc2{
+      float:left;
+      margin-top:-344px;
+      height:86px;
+      margin-left:309px;
+      font-size:30px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#fff;
+      font-weight:bold;}
+      .codes{
+      float:left;
+      margin-top:-219px;
+      margin-left:100px;
+      font-size:50px;
+      font-family: "Miriam Libre", sans-serif;
+      color:#000;
+      font-weight:bold;}
+      .codes input{
+      margin-left:20px;
+      height:37px;
+      width: 387px;
+      }
+      .codes button{
+      margin-left:230px;
+      height:67px;
+      width: 387px;
+      margin-top:49px;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:35px;
+      border-radius:10px;
+      border:0px;
+      background-color:#417AE9;
+      border:0px;
+      }
+      .codes input{
+      margin-bottom:20px;
+      }
+       .codes input["email"]{
+      margin-left:70px;
+      }
+
+       .train{
+      background-color:#FFFBD8;
+      width:100%;
+      height:2064px;
+      padding-top:50px;
+       padding-bottom:50px;
+      }
+      .techtrain{
+      float:none;
+      margin-left:50px;
+      margin-top:100px;
+
+      }
+      .imgtrain{
+       height:455px;
+       width:620px;
+       margin-left:100px;
+       border-radius:10px;
+      }
+      .texttrain{
+      margin-left:-50px;
+      margin-top:20px;
+      text-align:center;
+      font-family: "Miriam Libre", sans-serif;
+      font-size:36px;
+      font-weight:bold;
+
+      }
+      .btnsee{
+
+      margin-top:100px;
+      margin-left:290px;
+      height:100px;
+      width:354px;
+      background-color:#41e848;
+      color:#000;
+       font-family: "Miriam Libre", sans-serif;
+      font-size:35px;
+      font-weight:bold;
+      border-radius:10px;
+      border:0px;
+
+
+      }
+       .data{
+      width:100%;
+      height:1738px;
+      background-color:#323a5f;
+      }
+      .skills{
+       height:108px;
+       width:636px;
+       float:none;
+       background-color:#323a5f;
+       border:2px #fff solid;
+       margin-left:150px;
+       margin-top:72px;
+       color:#fff;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:35px;
+      font-weight:bold;
+      }
+
+           .virtual{
+      width:100%;
+      height:1018px;
+      padding-top:50px;
+      background-color:#06c59c;
+      }
+      .virtualtext{
+       font-family: "Miriam Libre", sans-serif;
+      font-size:30px;
+      color:#ff0303;
+      font-weight:bold;
+      float:none;
+      margin-left:198px;
+      margin-top:62px;
+
+
+      }
+      .virtualimg{
+      height:618px;
+      width:680px;
+      float:none;
+      margin-left:198px;
+      margin-top:0px;
+      }
+       .robot{
+      width:100%;
+      height:842px;
+      background-image:url("{% static 'images/ai-generated-8331364_1280.jpg' %}");
+      background-repeat:no-repeat,repeat;
+      background-position:center;
+      background-size:cover;
+      }
+      .robotimg{
+       float:left;
+       margin-left:558px;
+       margin-top:660px;
+       width:284px;
+       height:124px;
+      }
+       .lastfooter{
+      width:100%;
+
+      height:704px;
+      background-color:#d9d9d9;
+      }
+      .lasttext{
+       height:68px;
+       width:636px;
+       float:left;
+
+       margin-left:72px;
+       margin-top:2px;
+       color:#000;
+        font-family: "Miriam Libre", sans-serif;
+      font-size:25px;
+      font-weight:bold;
+
+      }
+
+       }
+
+
